@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Toaster from './Components/Screens/Toaster/Toaster'
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
+export default class App extends Component {
   static propTypes = {
-    text: PropTypes.string
+    isVisible: PropTypes.bool,
+    type: PropTypes.string,
+    header: PropTypes.string,
+    message: PropTypes.string,
+    onClick: PropTypes.func,
   }
 
   render() {
-    const {
-      text
-    } = this.props
+    const {isVisible, type, header, message, onClick} = this.props
 
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <Toaster
+        isVisible={isVisible}
+        type={type}
+        header={header}
+        message={message}
+        onClick={onClick}
+      />
     )
   }
 }
