@@ -15,7 +15,6 @@ npm install --save react-mini-toaster
 ```
 
 ## Usage
-
 ```jsx
 import React, { Component } from 'react'
 
